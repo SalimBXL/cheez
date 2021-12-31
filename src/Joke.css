@@ -1,0 +1,21 @@
+.Joke {
+    color: gray;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.Joke-smiley {
+    padding: auto;
+    margin: 0.5em;
+    width: fit-content;
+}
+
+.Joke-text {
+    padding: auto;
+    margin: 0.5em;
+    width: 500px;
+}
