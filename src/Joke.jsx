@@ -37,7 +37,7 @@ const Joke = ({id, joke, vote, upVote, downVote}) => {
             </div>
 
             <div className="Joke-emoji">
-                <i className={getEmoji()}></i>
+                <i className={getEmoji()} style={{color: getColor()}}></i>
             </div>
             
         </div>
