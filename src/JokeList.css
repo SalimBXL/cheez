@@ -10,8 +10,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     width: 30%;
-    -webkit-box-shadow: 5px 5px 15px 5px rgb(26, 147, 148, 0.48); 
     box-shadow: 5px 5px 15px 5px rgb(26, 147, 148, 0.48);
     z-index: 2;
 }
@@ -53,10 +53,11 @@
     color: #22c1c3;
     padding-left: 0.75em;
     padding-right: 0.75em;
+    cursor: pointer;
 }
 
 .JokeList-jokes {
-    height: 95%;
+    height: 90%;
     background-color: whitesmoke;
     width: 70%;
     align-self: center;
@@ -64,7 +65,5 @@
     flex-direction: column;
     justify-content: center;
     overflow: scroll;
-    -webkit-box-shadow: 5px 5px 15px 5px rgb(26, 147, 148, 0.48); 
     box-shadow: 5px 5px 15px 5px rgb(26, 147, 148, 0.48);
-    margin: auto;
 }

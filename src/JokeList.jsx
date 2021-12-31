@@ -8,11 +8,17 @@ import Joke from "./Joke";
 const API_URL = "https://icanhazdadjoke.com/";
 
 const JokeList = ({numJokesToGet}) => {
-    const [jokes, setJokes] = useState([]);
+    const [jokes, setJokes] = useState(
+            JSON.parse(window.localStorage.getItem("jokes") || "[]")
+        );
 
     useEffect(() => {
-        fetchJokes();
+        (jokes.length === 0) && fetchJokes();
     },[])
+
+    function handleClick() {
+        fetchJokes();
+    }
 
     async function fetchJokes() {
         const _jokes = [];
@@ -23,20 +29,24 @@ const JokeList = ({numJokesToGet}) => {
                 { id: uuid(), joke: data.joke, vote: 0}
             );
         }
-        setJokes(prevs => _jokes);
-    }
-
-    function handleClick() {
-
+        setJokes(prevs => {
+            const news = [...prevs, ..._jokes];
+            window.localStorage.setItem("jokes", JSON.stringify(news));
+            return news;
+        });
     }
 
     const handleVote = (id, delta) => {
-        setJokes((prevs) => prevs.map((prev) => {
-            return {
-                ...prev,
-                vote: (prev.id === id) ? (prev.vote + delta) : prev.vote
-            }
-        }));
+        setJokes((prevs) => {
+            const news = prevs.map((prev) => {
+                return {
+                    ...prev,
+                    vote: (prev.id === id) ? (prev.vote + delta) : prev.vote
+                }}
+            );
+            window.localStorage.setItem("jokes", JSON.stringify(news));
+            return news;
+        });
     }
     
     const jokeList = jokes.map((joke) => 
