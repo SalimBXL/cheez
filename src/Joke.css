@@ -1,21 +1,53 @@
 .Joke {
     color: gray;
-    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+    height: 9%;
 }
 
-.Joke-smiley {
-    padding: auto;
-    margin: 0.5em;
-    width: fit-content;
+.Joke-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    margin-right: 1rem;
 }
 
 .Joke-text {
-    padding: auto;
-    margin: 0.5em;
-    width: 500px;
+    width: 70%;
+}
+
+.Joke-votes {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 3px solid red;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(128, 128, 128, 0.527);
+    box-shadow: 5px 5px 15px 5px rgba(128, 128, 128, 0.479);
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.fa-arrow-up, .fa-arrow-down {
+    font-size: 1.5em;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.Joke-emoji {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 2.5em;
+    color: #1eabad;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(128, 128, 128, 0.527);
+    box-shadow: 5px 5px 15px 5px rgba(128, 128, 128, 0.479);
 }

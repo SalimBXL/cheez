@@ -56,15 +56,15 @@
 }
 
 .JokeList-jokes {
-    height: 90%;
+    height: 95%;
     background-color: whitesmoke;
     width: 70%;
     align-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1em;
     overflow: scroll;
     -webkit-box-shadow: 5px 5px 15px 5px rgb(26, 147, 148, 0.48); 
     box-shadow: 5px 5px 15px 5px rgb(26, 147, 148, 0.48);
+    margin: auto;
 }
