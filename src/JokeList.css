@@ -16,9 +16,34 @@
     z-index: 2;
 }
 
-.JokeList-sidebar img {
+.JokeList-logo {
     width: 50%;
 }
+
+.JokeList-logo:hover {
+    animation-name: spin;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    30% {
+      transform: rotate(20deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    80% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 
 .JokeList-title {
     font-family: 'Caveat', cursive;
@@ -51,6 +76,7 @@
     border-radius: 15px;
     background-color: whitesmoke;
     color: #22c1c3;
+    margin-top: 0.75em;
     padding-left: 0.75em;
     padding-right: 0.75em;
     cursor: pointer;
@@ -63,7 +89,11 @@
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: scroll;
     box-shadow: 5px 5px 15px 5px rgb(26, 147, 148, 0.48);
+}
+
+.JokeList-spinner {
+    text-align: center;
 }
